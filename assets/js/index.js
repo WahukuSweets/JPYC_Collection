@@ -26,7 +26,7 @@ async function checkJPYC(){
     jpyccontract = await new web3mm.eth.Contract(abi, JPYCAddress);
     jpycbalance = await jpyccontract.methods.balanceOf(useraddress).call() * 10e-19;
     if ( jpycbalance > 0){
-    document.getElementById('jpycstatus').innerText = jpycbalance;
+    document.getElementById('jpycstatus').innerText = Math.ceil(jpycbalance);
         complete++;
         }
 }
@@ -38,7 +38,7 @@ async function checkxDai(){
     xdaicontract = await new web3xdai.eth.Contract(abi, xdaiAddress);
     xdaibalance = await xdaicontract.methods.balanceOf(useraddress).call() * 10e-19;
     if ( xdaibalance > 0){
-    document.getElementById('xdaistatus').innerText = xdaibalance;
+    document.getElementById('xdaistatus').innerText = Math.ceil(xdaibalance);
         complete++;
     }
 }
@@ -49,7 +49,7 @@ async function checkPolygon(){
     polygoncontract = await new web3polygon.eth.Contract(abi, polygonAddress);
     polygonbalance = await polygoncontract.methods.balanceOf(useraddress).call() * 10e-19;    
     if ( polygonbalance > 0){
-    document.getElementById('polygonstatus').innerText = polygonbalance;
+    document.getElementById('polygonstatus').innerText = Math.ceil(polygonbalance);
         complete++;
     }
 }
