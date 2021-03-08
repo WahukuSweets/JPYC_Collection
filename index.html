@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>JPYC_Collection</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background: linear-gradient(90deg, rgb(197,231,234) 0%, rgb(206,199,236));">
+    <div class="row">
+        <div class="col">
+            <h1>　JPYCこれくしょん</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 offset-2">
+            <div><img src="assets/img/xdai.png" height="50%" style="width: 50%;">
+                <h2>JPYC on xDai</h2>
+                <h2 id="xdaistatus">持ってません</h2>
+            </div>
+        </div>
+        <div class="col-3">
+            <div><img src="assets/img/jpyc.png" height="50%" style="width: 48%;">
+                <h2>JPYC</h2>
+                <h2 id="jpycstatus">持ってません</h2>
+            </div>
+        </div>
+        <div class="col-3">
+            <div><img src="assets/img/polygon.png" height="50%" style="width: 50%;">
+                <h2>JPYC on Polygon</h2>
+                <h2 id="polygonstatus">持ってません</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2 id="message" style="margin-top: 50px;text-align: center;">MetaMaskをメインネットに接続してください</h2>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="wallet-popup">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">ウォレットを選択</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div style="text-align: center;"><a href="javascript:loadwallet()"><img src="assets/img/mm-logo.svg"></a></div>
+                </div>
+                <div class="modal-footer">
+                    <p>Ethereumメインネットに設定してください</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/abi.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.2.7/dist/web3.min.js" integrity="sha256-9rSwSMn4GDjf9FcHmJSvdiKGrk+mNIUmM4ltFDu3MUU=" crossorigin="anonymous"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
