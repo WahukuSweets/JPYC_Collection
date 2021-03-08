@@ -16,7 +16,7 @@ async function loadwallet(){
 //    window.alert(useraddress);
     await checkJPYC();
     await checkxDai();
-    await checkPolygon()
+    await checkPolygon();
     document.getElementById('message').innerText = "コンプリート状況 " + complete + " / 3" ;    
     if (complete == 3){ window.alert("フルコンプリートおめでとうございます！")  }
 }
