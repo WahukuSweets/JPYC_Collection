@@ -17,6 +17,7 @@ async function loadwallet(){
     await checkJPYC();
     await checkxDai();
     await checkPolygon();
+    await checkJCT();
     document.getElementById('message').innerText = "コンプリート状況 " + complete + " / 3" ;    
     if (complete == 3){ window.alert("フルコンプリートおめでとうございます！")  }
 }
@@ -50,6 +51,16 @@ async function checkPolygon(){
     polygonbalance = await polygoncontract.methods.balanceOf(useraddress).call() * 10e-19;    
     if ( polygonbalance > 0){
     document.getElementById('polygonstatus').innerText = Math.round(polygonbalance);
+    }
+}
+
+async function checkJCT(){
+    const polygonAddress = "0xcBBcf31c593312B12882F3f5F6344fb9c8a0AFe2";
+    const web3polygon = new Web3(new Web3.providers.HttpProvider("https://rpc-mainnet.maticvigil.com/"));
+    polygoncontract = await new web3polygon.eth.Contract(abi, polygonAddress);
+    polygonbalance = await polygoncontract.methods.balanceOf(useraddress).call() * 10e-19;    
+    if ( polygonbalance > 0){
+    document.getElementById('jct').innerText = "あなたのJCT保有量：" + Math.round(polygonbalance);
         complete++;
     }
 }
