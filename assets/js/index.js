@@ -51,6 +51,7 @@ async function checkPolygon(){
     polygonbalance = await polygoncontract.methods.balanceOf(useraddress).call() * 10e-19;    
     if ( polygonbalance > 0){
     document.getElementById('polygonstatus').innerText = Math.round(polygonbalance);
+        complete++;
     }
 }
 
@@ -61,6 +62,5 @@ async function checkJCT(){
     polygonbalance = await polygoncontract.methods.balanceOf(useraddress).call() * 10e-19;    
     if ( polygonbalance > 0){
     document.getElementById('jct').innerText = "あなたのJCT保有量：" + Math.round(polygonbalance);
-        complete++;
     }
 }
