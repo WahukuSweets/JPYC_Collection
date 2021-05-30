@@ -45,7 +45,7 @@ async function checkxDai(){
 }
 
 async function checkPolygon(){
-    const polygonAddress = "0x6AE7Dfc73E0dDE2aa99ac063DcF7e8A63265108c";
+    const polygonAddress = "0xa107B6663a5dE8FA085cb1f3bDdE615E38714845";
     const web3polygon = new Web3(new Web3.providers.HttpProvider("https://rpc-mainnet.maticvigil.com/"));
     polygoncontract = await new web3polygon.eth.Contract(abi, polygonAddress);
     polygonbalance = await polygoncontract.methods.balanceOf(useraddress).call() * 10e-19;    
